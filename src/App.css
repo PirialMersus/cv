@@ -1,0 +1,16 @@
+.sliderWrapper .awssld__controls__arrow-left:before,.awssld__controls__arrow-left:after {
+    background-color: #ffb400;
+}
+.sliderWrapper .awssld__controls__arrow-right:before,.awssld__controls__arrow-right:after {
+    background-color: #ffb400;
+}
+.sliderWrapper .awssld__bullets >button{
+    background-color: #ffb400;
+}
+.sliderWrapper .awssld__bullets >button.awssld__bullets--active{
+    background-color: #e0b56e;
+}
+.awssld__bullets {
+    position: static;
+    margin-top: 10px;
+}

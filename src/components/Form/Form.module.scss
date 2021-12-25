@@ -1,0 +1,61 @@
+.form {
+  //height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .inputField {
+    color: #656c6d;
+    margin-bottom: 24px;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+
+    svg {
+      font-size: 22px;
+      margin-top: 12px;
+      margin-right: 20px;
+      color: #ccc;
+      width: 1em;
+      transition: color 0.3s ease;
+    }
+
+    &:last-of-type {
+      color: #1e7d32;
+      align-items: flex-start;
+
+      svg {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .btn {
+    align-self: flex-start;
+    position: absolute;
+    bottom: 0;
+    width: 66.6666666667%;
+    background: #ffb400;
+    height: 42px;
+    line-height: 42px;
+    font-size: 15px;
+    transition: 0.3s ease-in-out;
+    font-weight: 700;
+    box-shadow: none;
+    border-radius: 0;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    outline: 0;
+    border: none;
+
+    span{
+      margin-right: 10px;
+    }
+
+    &:hover {
+      color: #eee;
+    }
+  }
+
+}
