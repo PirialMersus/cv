@@ -57,5 +57,33 @@
       color: #eee;
     }
   }
-
 }
+@media (max-width: 1000px) {
+  .form {
+    .btn {
+      width: calc(100% - 48px);
+    }
+  }
+}
+@media (max-width: 800px) {
+  .form {
+    .inputField {
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .form {
+    .inputField {
+      &:last-of-type {
+        margin-bottom: 150px;
+      }
+    }
+    .btn {
+      width: 100%;
+      bottom: 70px;
+    }
+  }
+}
+

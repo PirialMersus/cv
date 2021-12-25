@@ -62,7 +62,8 @@ function App() {
                                 <ReactTypingEffect
                                     className={s.typedText}
                                     cursor={' '}
-                                    text={["DEVELOPER", "REACT", "JAVASCRIPT"]}
+                                    // text={["DEVELOPER", "REACT", "JAVASCRIPT"]}
+                                    text={["Фанат", "Олега", "Гениального"]}
                                     eraseDelay={1000}
                                     typingDelay={1000}
                                     speed={50}

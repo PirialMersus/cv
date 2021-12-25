@@ -1,3 +1,4 @@
+@import "./../../../src/assets/scss/commonStyles";
 .container {
   transition: all 1s ease;
   opacity: 0;
@@ -554,6 +555,9 @@
 
 @media (max-width: 600px) {
   .container {
+    h2 {
+      font-size: $h2FontSizeFor600Scr;
+    }
     .imgPlusPersonalInfosWrap {
       display: block;
       .mainPictureInner {

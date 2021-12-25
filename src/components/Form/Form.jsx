@@ -120,7 +120,7 @@ export const Form = () => {
                     label="Your Comment"
                     fullWidth
                     multiline
-                    rows={4}
+                    rows={2}
                     {...formik.getFieldProps('message')}
                 />
                 {formik.touched.message && formik.errors.message &&

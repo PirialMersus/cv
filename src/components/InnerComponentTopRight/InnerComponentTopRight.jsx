@@ -116,8 +116,8 @@ export const InnerComponentTopRight = (props) => {
                         Download CV <FontAwesomeIcon icon={faFilePdf}/>
                         {/*todo*/}
                     </a>
-                    <a href="/blog" className={classNames(s.btn, s.btnBlog, s.fontWeight_700)}>
-                        My Blog <FontAwesomeIcon icon={faEdit}/>
+                    <a href="https://www.instagram.com/kotesadko/" className={classNames(s.btn, s.btnBlog, s.fontWeight_700)}>
+                        BEST LINK <FontAwesomeIcon icon={faEdit}/>
                     </a>
                 </div>
             </div>

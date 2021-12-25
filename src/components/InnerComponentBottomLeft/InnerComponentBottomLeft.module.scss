@@ -1,4 +1,4 @@
-
+@import "./../../../src/assets/scss/commonStyles";
 .container {
   //overflow: auto;
   transition: all 1s ease;
@@ -298,10 +298,21 @@
 
 @media (max-width: 600px) {
   .container {
+    h2 {
+      font-size: $h2FontSizeFor600Scr;
+    }
     .closeButton {
       width: 20px;
       top: 20px;
       right: 20px;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .container {
+    h2 {
+      padding-left: 20px;
+      padding-right: 20px;
     }
   }
 }

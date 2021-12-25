@@ -164,6 +164,15 @@
 }
 @media (max-width: 600px) {
   .container {
+    .contentRow {
+      display: block;
+      .leftSide {
+        margin-bottom: 50px;
+      }
+      .rightSide {
+        padding: 0;
+      }
+    }
     .closeButton {
       width: 20px;
       top: 20px;
