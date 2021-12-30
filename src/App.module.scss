@@ -1,4 +1,4 @@
-
+@import "./src/assets/scss/commonStyles";
 .app {
   position: relative;
   height: 100vh;
@@ -72,16 +72,16 @@
       //display: none;
       position: absolute;
       background-image: url('/img/myPhoto.jpg');
-      //background-position: 70% 50%;
+      background-position: 70% 50%;
       //background-position: 70% 50%;
       padding: 0;
       height: calc(100vh - 48px);
       margin-top: 24px;
       margin-left: 24px;
-      //background-size: cover;
-      background-size: auto;
-      background-position: center center;
-    background-repeat: no-repeat;
+      background-size: cover;
+      //background-size: auto;
+      //background-position: center center;
+      background-repeat: no-repeat;
       width: calc(33.3333333333% - 48px);
       //width: 33.3333333333%;
 
@@ -140,14 +140,14 @@
 
 
       .item {
-        transition: width 1s ease,
-        height 1s ease,
-        top 1s ease,
-        bottom 1s ease,
-        left 1s ease,
-        opacity 1s ease,
-        visibility 1s ease,
-        right 1s ease;
+        transition: width $timeDelay ease,
+        height $timeDelay ease,
+        top $timeDelay ease,
+        bottom $timeDelay ease,
+        left $timeDelay ease,
+        opacity $timeDelay ease,
+        visibility $timeDelay ease,
+        right $timeDelay ease;
 
         background: #efe9e9;
 
@@ -174,7 +174,7 @@
         .miniBlock {
           height: 100%;
           width: 100%;
-          transition: all 1s ease;
+          transition: all $timeDelay ease;
           opacity: 0;
           visibility: hidden;
           display: flex;

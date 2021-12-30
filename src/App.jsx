@@ -24,7 +24,7 @@ function App() {
     useEffect(() => {
         setTimeout(() => {
             setNumberOfBlockAfterDelay(activeBlockNumber)
-        }, 1000)
+        }, 500)
     }, [activeBlockNumber])
 
     const finalFirstBlock_item_Class = classNames(s.item, s.topLeft, {
@@ -63,7 +63,7 @@ function App() {
                                     className={s.typedText}
                                     cursor={' '}
                                     // text={["DEVELOPER", "REACT", "JAVASCRIPT"]}
-                                    text={["Фанат", "Олега", "Гениального"]}
+                                    text={["REACT", "JAVASCRIPT", "DEVELOPER"]}
                                     eraseDelay={1000}
                                     typingDelay={1000}
                                     speed={50}
