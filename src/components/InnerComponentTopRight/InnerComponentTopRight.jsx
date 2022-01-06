@@ -10,7 +10,8 @@ import {
     faStar,
     faStarHalfAlt,
     faUser
-} from '@fortawesome/free-solid-svg-icons'
+} from '@fortawesome/free-solid-svg-icons';
+import cvPdf from "../../doc/FrontEndDev.pdf";
 import {faStar as emptyFaStar} from '@fortawesome/free-regular-svg-icons'
 import s from './InnerComponentTopRight.module.scss';
 import myPhoto from "./../../img/myPhoto.jpg"
@@ -112,7 +113,7 @@ export const InnerComponentTopRight = (props) => {
                             <li><span className={s.fontWeight_700}>Skype: </span>pirial_mersus</li>
                         </ul>
                     </div>
-                    <a href="/src/doc/FrontEndDev.pdf" className={s.btn} download>
+                    <a href={cvPdf} className={s.btn} download>
                         Download CV <FontAwesomeIcon icon={faFilePdf}/>
                         {/*todo*/}
                     </a>
