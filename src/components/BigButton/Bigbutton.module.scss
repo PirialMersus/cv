@@ -30,7 +30,6 @@
       color: #555;
       position: relative;
       transition: all $timeDelay ease;
-      //transform: translateY(100%);
 
       &:before {
         content: attr(data-text);
@@ -43,7 +42,6 @@
     .firstWord {
       &:before {
         top: 100%;
-
         color: #ffb400;
       }
     }

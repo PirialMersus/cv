@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from "react";
-import s from './InnerComponentBottomLeft.module.scss';
+import React, {useState} from "react";
+import s from './MyPortfolio.module.scss';
 import winterAdventure from '../../img/imagecompressor/winterAdventure-min.jpg';
 import board from '../../img/imagecompressor/board-min.jpg';
 import todo from '../../img/imagecompressor/todo-min.png';
@@ -156,20 +156,12 @@ const images = [
     },
 ]
 
-export const InnerComponentBottomLeft = (props) => {
+export const MyPortfolio = (props) => {
     const [activeSlide, setActiveSlide] = useState(1)
     const [isSliderShown, setIsSliderShown] = useState(false)
-    // const [isSliderShownWithDelay, setIsSliderShownWithDelay] = useState(false)
-    //
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //         setIsSliderShownWithDelay(isSliderShown)
-    //     }, 1000)
-    // }, [isSliderShown])
 
     const onImageClickHandler = (index) => {
         setIsSliderShown(true)
-
         setActiveSlide(index)
     }
 
@@ -189,14 +181,14 @@ export const InnerComponentBottomLeft = (props) => {
 
             <div className={`${s.imagesContainer} ${isSliderShown === true && s.onActiveSlider}`}>
                 {images.map((el, index) => (
-                    <div className={s.card} key={index}
+                    <div className={s.card} key={el.title}
                          onClick={() => {
                              onImageClickHandler(index)
                          }}
                     >
                         <div className={s.box}>
                             <div className={s.imgBx}>
-                                <img src={el.image} alt="image"/>
+                                <img src={el.image} alt={el.title}/>
                             </div>
                             <div className={s.contentBx}>
                                 <div>
@@ -211,16 +203,13 @@ export const InnerComponentBottomLeft = (props) => {
             <div
                 className={`${s.sliderWrapper} ${isSliderShown === true && s.activeSlider}`}
             >
-
                 <AwesomeSlider
                     organicArrows
                     className='sliderWrapper'
-                    // style={cssModule}
                     selected={activeSlide}
                     animation="foldOutAnimation"
                     cssModule={[CoreStyles, AnimationStyles]}
                 >
-
                     {images.map((el, index) => (
                         <div data-src={el.image} key={index}>
                             <div className={s.sliderDescriptionBackground} onClick={() => {
@@ -238,7 +227,6 @@ export const InnerComponentBottomLeft = (props) => {
                             </div>
                         </div>
                     ))}
-
                 </AwesomeSlider>
             </div>
 

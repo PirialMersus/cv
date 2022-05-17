@@ -1,5 +1,5 @@
 import React from "react";
-import s from './InnerComponentBottomRight.module.scss'
+import s from './GetInTouch.module.scss'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelopeOpen} from "@fortawesome/free-solid-svg-icons/faEnvelopeOpen";
 import {faSignOutAlt} from "@fortawesome/free-solid-svg-icons/faSignOutAlt";
@@ -14,14 +14,11 @@ import {Form} from "../Form/Form";
 
 const classNames = require('classnames');
 
-
-
-
-export const InnerComponentBottomRight = (props) => {
+export const GetInTouch = ({numberOfBlockAfterDelay, setNumberOfActiveBlock}) => {
 
 
     return (
-        <div className={classNames(s.container, {[s.visible]: props.numberOfBlockAfterDelay === 4})}>
+        <div className={classNames(s.container, {[s.visible]: numberOfBlockAfterDelay === 4})}>
             <div className={s.divideLineBlock}>
                 <div className={s.line}/>
                 <div className={s.letterIcon}>
@@ -37,12 +34,11 @@ export const InnerComponentBottomRight = (props) => {
                     <h6>EMAIL</h6>
                     <span><FontAwesomeIcon icon={faEnvelope}/>pirialmersus@gmail.com</span>
                     <h6>telegram</h6>
-                    <span><FontAwesomeIcon icon={faTelegramPlane}/>pirial_mersus</span>
+                    <span><FontAwesomeIcon icon={faTelegramPlane}/>pirial_gena</span>
                     <h6>ADDRESS</h6>
                     <span><FontAwesomeIcon icon={faHome}/>Odessa, Ukraine</span>
                     <h6>SOCIAL PROFILES</h6>
                     <ul className={s.socialNetworks}>
-                        {/*<FontAwesomeIcon icon={faFacebookSquare} className={s.faceBook}/>*/}
                         <li>
                             <a href="https://www.facebook.com/profile.php?id=100006915912945" className={s.facebook}>
                                 <FontAwesomeIcon icon={faFacebookF}/>
@@ -74,7 +70,7 @@ export const InnerComponentBottomRight = (props) => {
 
             <div className={s.closeButton}>
                 <FontAwesomeIcon icon={faSignOutAlt} onClick={() => {
-                    props.setNumberOfActiveBlock(1)
+                    setNumberOfActiveBlock(1)
                 }}/>
             </div>
         </div>

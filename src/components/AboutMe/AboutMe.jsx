@@ -11,33 +11,35 @@ import {
     faStarHalfAlt,
     faUser
 } from '@fortawesome/free-solid-svg-icons';
-import cvPdf from "../../doc/FrontEndDev.pdf";
+import cvPdf from "../../doc/FrontendDev.pdf";
 import {faStar as emptyFaStar} from '@fortawesome/free-regular-svg-icons'
-import s from './InnerComponentTopRight.module.scss';
+import s from './AboutMe.module.scss';
 import myPhoto from "./../../img/myPhoto.jpg"
 import {faSignOutAlt} from "@fortawesome/free-solid-svg-icons/faSignOutAlt";
-// import {faStarHalfStroke} from "@fortawesome/free-solid-svg-icons/faStarHalfStroke";
 
 const classNames = require('classnames');
 
-const buttonsNames = [{btnName: 'experience', btnIcon: faBriefcase}, {
-    btnName: 'education',
-    btnIcon: faGraduationCap
-}, {btnName: 'skills', btnIcon: faStar}]
+const buttonsNames = [
+    {
+        btnName: 'experience',
+        btnIcon: faBriefcase
+    },
+    {
+        btnName: 'education',
+        btnIcon: faGraduationCap
+    },
+    {
+        btnName: 'skills',
+        btnIcon: faStar
+    }
+]
 
-export const InnerComponentTopRight = (props) => {
+export const AboutMe = ({numberOfBlockAfterDelay, setNumberOfActiveBlock}) => {
 
     const initSlidesNames = ['active', 'neutral', 'passive']
 
     const [activeSlideNumber, setActiveSlideNumber] = React.useState(0)
     const [slides, setSlides] = React.useState(initSlidesNames)
-
-
-    // const finalFirstContolBtnClass = `${s.controlBtn} ${activeSlideNumber === 0 && s.active}`
-    // const finalSecondContolBtnClass = `${s.controlBtn} ${activeSlideNumber === 1 && s.active}`
-    // const finalThirdContolBtnClass = `${s.controlBtn} ${activeSlideNumber === 2 && s.active}`
-
-    // const slides = ['active', 'neutral', 'passive']
 
 
     function slideClickHandler(slide) {
@@ -50,9 +52,8 @@ export const InnerComponentTopRight = (props) => {
     }
 
     function changeSlidesNumbers(slide, prevState) {
-
         let indexPrevActiveElem;
-        prevState.find((el, index) => {
+        prevState.forEach((el, index) => {
             if (el === 'active') {
                 indexPrevActiveElem = index;
             }
@@ -61,7 +62,7 @@ export const InnerComponentTopRight = (props) => {
         const tempSlides = ['', '', '']
         tempSlides[slide] = 'active'
         tempSlides[indexPrevActiveElem] = 'neutral'
-        tempSlides.map((slide, index) => {
+        tempSlides.forEach((slide, index) => {
                 if (slide !== 'active' && slide !== 'neutral') {
                     tempSlides[index] = 'passive'
                 }
@@ -71,7 +72,7 @@ export const InnerComponentTopRight = (props) => {
     }
 
     return (
-        <div className={classNames(s.container, {[s.visible]: props.numberOfBlockAfterDelay === 2})}>
+        <div className={classNames(s.container, {[s.visible]: numberOfBlockAfterDelay === 2})}>
             <h2><span>ABOUT</span> <span>ME</span></h2>
             <div className={s.divideLineBlock}>
                 <div className={s.line}/>
@@ -82,7 +83,7 @@ export const InnerComponentTopRight = (props) => {
             </div>
             <div className={s.imgPlusPersonalInfosWrap}>
                 <div className={s.mainPictureInner}>
-                    <img src={myPhoto} alt="my photo"/>
+                    <img src={myPhoto} alt="avatar"/>
                 </div>
                 <div className={s.personalInfosBlock}>
                     <div>
@@ -115,9 +116,9 @@ export const InnerComponentTopRight = (props) => {
                     </div>
                     <a href={cvPdf} className={s.btn} download>
                         Download CV <FontAwesomeIcon icon={faFilePdf}/>
-                        {/*todo*/}
                     </a>
-                    <a href="https://www.instagram.com/gennadii_yds/" className={classNames(s.btn, s.btnBlog, s.fontWeight_700)}>
+                    <a href="https://www.instagram.com/gennadii_yds/"
+                       className={classNames(s.btn, s.btnBlog, s.fontWeight_700)}>
                         Hobby <FontAwesomeIcon icon={faEdit}/>
                     </a>
                 </div>
@@ -128,7 +129,7 @@ export const InnerComponentTopRight = (props) => {
                     {buttonsNames.map((button, idx) => (
                         <div className={`${s.controlBtn} ${activeSlideNumber === idx && s.active}`}
                              onClick={() => slideClickHandler(idx)}
-                             key={idx}
+                             key={button.btnName}
                         >
                             <FontAwesomeIcon icon={button.btnIcon}/>
                             <h6>{button.btnName}</h6>
@@ -147,10 +148,10 @@ export const InnerComponentTopRight = (props) => {
                             <div className={s.resumeCardBody}>
                                 <div className={s.experience}>
                                     <div className={s.resumeContent}>
-                                        <h6>WORKING AS A FRONTEND DEVELOPER AT <span>PROVECTUS COMPANY</span>
+                                        <h6>WORKING AS A FRONTEND DEVELOPER AT <span>ATLANTA COMPANY</span>
                                         </h6>
                                         <span className={s.date}><FontAwesomeIcon
-                                            icon={faCalendar}/> <span>2021, august - nowadays</span></span>
+                                            icon={faCalendar}/> <span>2021, august - ...</span></span>
                                         <p> I am working with Redux, React/Redux, axios, Material-UI library,
                                             Hooks, TypeScript. Also I am creating Rest API. Refactoring, bug fixing,
                                             migrating to TypeScript, registration and login form creation, custom
@@ -181,7 +182,17 @@ export const InnerComponentTopRight = (props) => {
                             <div className={s.resumeCardBody}>
                                 <div className={s.experience}>
                                     <div className={s.resumeContent}>
-                                        <h6><span>IT INCUBATOR FRONT END DEVELOPMENT COURSES</span>
+                                        <h6><span>IT INCUBATOR</span> BACKEND DEVELOPMENT COURSES</h6>
+                                        <span className={s.date}><FontAwesomeIcon
+                                            icon={faCalendar}/> <span>2022 - ...</span></span>
+                                        <p>Express, NestJS, Swagger, MongoDB, PostgreSQL,
+                                            Microservices, RabbitMQ, WebSocket, DevOps basics
+                                        </p>
+                                    </div>
+                                    <span className={s.separator}/>
+
+                                    <div className={s.resumeContent}>
+                                        <h6><span>IT INCUBATOR FRONTEND DEVELOPMENT COURSES</span>
                                         </h6>
                                         <span className={s.date}><FontAwesomeIcon
                                             icon={faCalendar}/> <span>2020-2021</span></span>
@@ -189,18 +200,10 @@ export const InnerComponentTopRight = (props) => {
                                             Redux-thunk; State vs Redux; HOC; Methods of lifecycle; babel;
                                             create-react-app; Hooks; Presentational & ContainerComponents;
                                             bind; TypeScript; RestAPI; Vanilla JS; Storybook; Ant Design; Jest;
-                                            Snapshot; Testing; MaterislUI
+                                            Snapshot; Testing; MaterialUI
                                         </p>
                                     </div>
-                                    <span className={s.separator}/>
-                                    <div className={s.resumeContent}>
-                                        <h6><span>GO IT</span> FULLSTACK FRONTEND COURSES</h6>
-                                        <span className={s.date}><FontAwesomeIcon
-                                            icon={faCalendar}/> <span>2017</span></span>
-                                        <p>HTML/CSS/Less/Sass; Bootstrap; Javascript; jQuery; WordPress; Responsive web
-                                            design (RWD); Git/GitHub;
-                                        </p>
-                                    </div>
+
                                     <span className={s.separator}/>
                                     <div className={s.resumeContent}>
                                         <h6><span>DONETSK NATIONAL TECHNICAL UNIVERSITY</span></h6>
@@ -379,7 +382,7 @@ export const InnerComponentTopRight = (props) => {
             </div>
             <div className={s.closeButton}>
                 <FontAwesomeIcon icon={faSignOutAlt} className={s.fontAwesome} onClick={() => {
-                    props.setNumberOfActiveBlock(1)
+                    setNumberOfActiveBlock(1)
                 }}/>
             </div>
 

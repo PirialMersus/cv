@@ -6,9 +6,7 @@ import {faComments} from "@fortawesome/free-solid-svg-icons/faComments";
 import React, {useState} from "react";
 import {withStyles} from "@material-ui/styles";
 import TextField from "@material-ui/core/TextField";
-import {useField, useFormik} from "formik";
-import FormControl from "@material-ui/core/FormControl";
-import Button from "@material-ui/core/Button";
+import {useFormik} from "formik";
 import emailjs from 'emailjs-com';
 
 import {faTelegramPlane} from "@fortawesome/free-brands-svg-icons/faTelegramPlane";
@@ -24,9 +22,6 @@ const CssTextField = withStyles({
         '& .MuiInput-underline:after': {
             borderBottomColor: '#ffb400',
         },
-        // '& .MuiInput-input': {          input text styles
-        //     color: '#ffb400',
-        // },
         '& .MuiOutlinedInput-root': {
             '& fieldset': {
                 borderColor: '#ffb400',
@@ -68,7 +63,6 @@ export const Form = () => {
             return errors;
         },
         onSubmit: values => {
-            console.log(values)
             emailjs.send('service_gsfx0qh', 'template_lojlps9', values, 'user_bGtXPIUcyJP1RAgR0lXla')
                 .then((result) => {
                     console.log(result.text);
@@ -83,11 +77,9 @@ export const Form = () => {
 
     return (
         <form className={s.form} noValidate autoComplete="off" onSubmit={formik.handleSubmit}>
-            {/*<FormControl>*/}
             <div className={s.inputField} onBlur={() => setValue(0)}>
                 <FontAwesomeIcon name={'name'} icon={faUser} style={{color: `${value === 1 ? '#ffb400' : '#ccc'}`}}/>
                 <CssTextField
-                    // id="outlined-basic"
                     label="Your Name"
                     fullWidth
                     onClick={() => setValue(1)}
@@ -99,7 +91,6 @@ export const Form = () => {
             <div className={s.inputField} onBlur={() => setValue(0)}>
                 <FontAwesomeIcon icon={faEnvelope} style={{color: `${value === 2 ? '#ffb400' : '#ccc'}`}}/>
                 <CssTextField
-                    // id="outlined-basic"
                     onClick={() => setValue(2)}
                     label="Your Email"
                     fullWidth
@@ -114,7 +105,6 @@ export const Form = () => {
                 <FontAwesomeIcon icon={faComments} className={'icon'}
                                  style={{color: `${value === 3 ? '#ffb400' : '#ccc'}`}}/>
                 <CssTextField
-                    // id="outlined-basic"
                     onClick={() => setValue(3)}
                     className='textAreaInput'
                     label="Your Comment"
@@ -127,7 +117,6 @@ export const Form = () => {
                 <div style={{color: 'red'}}>{formik.errors.message}</div>}
 
             </div>
-            {/*</FormControl>*/}
             <button type={'submit'} className={s.btn}><span>Send message</span><FontAwesomeIcon
                 icon={faTelegramPlane}/>
             </button>

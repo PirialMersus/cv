@@ -1,4 +1,5 @@
 @import "./../../../src/assets/scss/commonStyles";
+
 .container {
   transition: all 1s ease;
   opacity: 0;
@@ -19,7 +20,6 @@
     font-size: 55px;
     color: #666;
     text-align: center;
-    //font-weight: 900;
     text-transform: uppercase;
     line-height: 110%;
     margin: 2.3733333333rem 0 1.424rem 0;
@@ -30,28 +30,7 @@
   }
 
   .divideLineBlock {
-    margin: 40px auto;
-    width: 66.6666666667%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    .line {
-      height: 1px;
-      background-color: #ddd;
-      width: 40%;
-      margin: 0 5px;
-    }
-
-    .letterIcon {
-      color: #ffb400;
-
-      svg {
-        width: 20px;
-        height: 20px;
-      }
-    }
-
+    @include divideLineBlock;
   }
 
   .imgPlusPersonalInfosWrap {
@@ -125,7 +104,6 @@
         line-height: 42px;
         font-size: 15px;
         float: left;
-        //display: flex;
         text-decoration: none;
         color: #fff;
         text-align: center;
@@ -168,20 +146,15 @@
         svg {
           font-size: 22px;
           padding-left: 8px;
-          //line-height: inherit;
           color: #fff;
         }
       }
-
     }
   }
 
   .sliderWrap {
-
     display: flex;
-    //height: max-content;
     height: 800px;
-    //align-items: center;
 
     .controlsBlock {
       padding: 0 24px;
@@ -218,7 +191,6 @@
         h6 {
           display: inline-block;
           text-transform: uppercase;
-          //font-size: 1.15rem;
           line-height: 110%;
           font-size: 22px;
           font-weight: 600;
@@ -229,7 +201,6 @@
           color: #fff;
         }
       }
-
     }
 
     .slidesBlockWrap {
@@ -238,7 +209,6 @@
       right: auto;
       padding: 90px 24px 0;
       width: 66.6666666667%;
-
 
       .slidesBlock {
         position: relative;
@@ -304,7 +274,6 @@
             h6 {
               margin-left: 4px;
               display: inline-block;
-              //text-transform: uppercase;
               font-weight: bold;
               font-size: 28px;
             }
@@ -332,23 +301,12 @@
                   text-transform: uppercase;
                   line-height: 110%;
                   color: #656c6d;
-
-                  > span {
-                    //margin-left: 10px;
-                    //font-weight: 600;
-                  }
-
                 }
 
                 > span {
                   font-weight: 400;
                   color: #aaa;
                   font-size: 13px;
-
-                  svg {
-                    //padding-right: 10px;
-                    //color: white;
-                  }
 
                   > span {
                     margin-left: 10px;
@@ -380,7 +338,6 @@
               .row {
                 margin-left: -.75rem;
                 margin-right: -.75rem;
-                //margin-bottom: 20px;
 
                 &:after {
                   content: " ";
@@ -399,7 +356,6 @@
 
                     > h6 {
                       font-size: 15px;
-                      margin-top: 0;
                       text-transform: uppercase;
                       line-height: 110%;
                       margin: .7666666667rem 0 .46rem 0;
@@ -409,13 +365,10 @@
                     > p {
                       font-size: 14px;
                       padding-bottom: 20px;
-                      margin: 0 auto;
-                      margin-top: 5px;
+                      margin: 5px auto 0;
                       color: #ffb400;
                       line-height: 2;
-                      //color: #656c6d;
                       font-weight: 400;
-
                     }
                   }
                 }
@@ -425,27 +378,10 @@
         }
       }
     }
-
   }
 
   .closeButton {
-    position: absolute;
-    top: 32px;
-    right: 48px;
-    width: 30px;
-    cursor: pointer;
-    z-index: 100;
-    color: #656c6d;
-
-    svg {
-      width: 100%;
-      height: 100%;
-      transition: color 0.3s ease;
-
-      &:hover {
-        color: #ffb400;
-      }
-    }
+    @include closeButton;
   }
 }
 
@@ -457,7 +393,7 @@
 
       .mainPictureInner {
         display: block;
-        //width: 33.3333333333%;
+
         img {
           width: 100%;
           height: max-content;
@@ -495,12 +431,13 @@
         float: none;
         display: block;
         width: 100%;
+
         &.btn:not(.btnBlog) {
           margin-bottom: 24px;
-
         }
       }
     }
+
     .sliderWrap {
       height: max-content;
 
@@ -511,6 +448,7 @@
       .slidesBlockWrap {
         .slidesBlock {
           position: static;
+
           .slide {
             position: static;
             margin-bottom: 24px;
@@ -558,36 +496,23 @@
     h2 {
       font-size: $h2FontSizeFor600Scr;
     }
+
     .imgPlusPersonalInfosWrap {
       display: block;
+
       .mainPictureInner {
         padding: 0 24px;
         margin-bottom: 15px;
-        img {
-        }
-      }
-
-      .personalInfosBlock {
-        .exactlyMyInfo {
-
-        }
       }
     }
 
     .sliderWrap {
-      .controlsBlock {
-      }
-
       .slidesBlockWrap {
         .slidesBlock {
           .slide {
 
             .resumeCardBody {
-              .experience {
-                .resumeContent {
-                }
-              }
-              .counterContainer{
+              .counterContainer {
                 .row {
                   .col {
                     padding: 0;
@@ -599,6 +524,7 @@
         }
       }
     }
+
     .closeButton {
       width: 20px;
       top: 20px;
