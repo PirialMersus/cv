@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/cv/static/css/main.9a86ea34.chunk.css",
-    "main.js": "/cv/static/js/main.e0ffa2a4.chunk.js",
-    "main.js.map": "/cv/static/js/main.e0ffa2a4.chunk.js.map",
-    "runtime-main.js": "/cv/static/js/runtime-main.fb39397c.js",
-    "runtime-main.js.map": "/cv/static/js/runtime-main.fb39397c.js.map",
+    "main.css": "/cv/static/css/main.e2f938bd.chunk.css",
+    "main.js": "/cv/static/js/main.5a118167.chunk.js",
+    "main.js.map": "/cv/static/js/main.5a118167.chunk.js.map",
+    "runtime-main.js": "/cv/static/js/runtime-main.8ec3949e.js",
+    "runtime-main.js.map": "/cv/static/js/runtime-main.8ec3949e.js.map",
     "static/css/2.aa913815.chunk.css": "/cv/static/css/2.aa913815.chunk.css",
-    "static/js/2.18961836.chunk.js": "/cv/static/js/2.18961836.chunk.js",
-    "static/js/2.18961836.chunk.js.map": "/cv/static/js/2.18961836.chunk.js.map",
+    "static/js/2.b78ec009.chunk.js": "/cv/static/js/2.b78ec009.chunk.js",
+    "static/js/2.b78ec009.chunk.js.map": "/cv/static/js/2.b78ec009.chunk.js.map",
     "index.html": "/cv/index.html",
     "static/css/2.aa913815.chunk.css.map": "/cv/static/css/2.aa913815.chunk.css.map",
-    "static/css/main.9a86ea34.chunk.css.map": "/cv/static/css/main.9a86ea34.chunk.css.map",
-    "static/js/2.18961836.chunk.js.LICENSE.txt": "/cv/static/js/2.18961836.chunk.js.LICENSE.txt",
-    "static/media/FrontendDev.f4f1aab0.pdf": "/cv/static/media/FrontendDev.f4f1aab0.pdf",
+    "static/css/main.e2f938bd.chunk.css.map": "/cv/static/css/main.e2f938bd.chunk.css.map",
+    "static/js/2.b78ec009.chunk.js.LICENSE.txt": "/cv/static/js/2.b78ec009.chunk.js.LICENSE.txt",
+    "static/media/Fesenko Gennadii Front.02e7a13c.pdf": "/cv/static/media/Fesenko Gennadii Front.02e7a13c.pdf",
     "static/media/aim_final-min.e5125a11.jpg": "/cv/static/media/aim_final-min.e5125a11.jpg",
     "static/media/allWorks_final-min.d10e0855.jpg": "/cv/static/media/allWorks_final-min.d10e0855.jpg",
     "static/media/board-min.a8e2223d.jpg": "/cv/static/media/board-min.a8e2223d.jpg",
@@ -35,10 +35,10 @@
     "static/media/winterAdventure-min.e0ea618d.jpg": "/cv/static/media/winterAdventure-min.e0ea618d.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.fb39397c.js",
+    "static/js/runtime-main.8ec3949e.js",
     "static/css/2.aa913815.chunk.css",
-    "static/js/2.18961836.chunk.js",
-    "static/css/main.9a86ea34.chunk.css",
-    "static/js/main.e0ffa2a4.chunk.js"
+    "static/js/2.b78ec009.chunk.js",
+    "static/css/main.e2f938bd.chunk.css",
+    "static/js/main.5a118167.chunk.js"
   ]
 }
