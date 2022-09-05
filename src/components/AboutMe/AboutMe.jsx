@@ -11,7 +11,7 @@ import {
     faStarHalfAlt,
     faUser
 } from '@fortawesome/free-solid-svg-icons';
-import cvPdf from "../../doc/FrontendDev.pdf";
+import cvPdf from "../../doc/Fesenko Gennadii Front.pdf";
 import {faStar as emptyFaStar} from '@fortawesome/free-regular-svg-icons'
 import s from './AboutMe.module.scss';
 import myPhoto from "./../../img/myPhoto.jpg"
@@ -151,7 +151,7 @@ export const AboutMe = ({numberOfBlockAfterDelay, setNumberOfActiveBlock}) => {
                                         <h6>WORKING AS A FRONTEND DEVELOPER AT <span>ATLANTA COMPANY</span>
                                         </h6>
                                         <span className={s.date}><FontAwesomeIcon
-                                            icon={faCalendar}/> <span>2021, august - ...</span></span>
+                                            icon={faCalendar}/> <span>2021, august - now</span></span>
                                         <p> I am working with Redux, React/Redux, axios, Material-UI library,
                                             Hooks, TypeScript. Also I am creating Rest API. Refactoring, bug fixing,
                                             migrating to TypeScript, registration and login form creation, custom
@@ -165,9 +165,9 @@ export const AboutMe = ({numberOfBlockAfterDelay, setNumberOfActiveBlock}) => {
                                         <h6>WORKING AS SMM AND CONTENT MANAGER AT <span>IT COMPANY</span></h6>
                                         <span className={s.date}><FontAwesomeIcon
                                             icon={faCalendar}/> <span>2020 - 2021</span></span>
-                                        <p>- improved my skills in teamwork<br/>
-                                            - set up SRM systems<br/>
-                                            - read, study and code all my free time
+                                        <p>- Learned how to work in a team<br/>
+                                            - Learned how to work with CRM systems<br/>
+                                            - Studied coding for myself
                                         </p>
                                     </div>
                                 </div>
@@ -184,7 +184,7 @@ export const AboutMe = ({numberOfBlockAfterDelay, setNumberOfActiveBlock}) => {
                                     <div className={s.resumeContent}>
                                         <h6><span>IT INCUBATOR</span> BACKEND DEVELOPMENT COURSES</h6>
                                         <span className={s.date}><FontAwesomeIcon
-                                            icon={faCalendar}/> <span>2022 - ...</span></span>
+                                            icon={faCalendar}/> <span>2022, April - in process...</span></span>
                                         <p>Express, NestJS, Swagger, MongoDB, PostgreSQL,
                                             Microservices, RabbitMQ, WebSocket, DevOps basics
                                         </p>
